@@ -1,7 +1,10 @@
-import { View, Text, StyleSheet, Pressable, Animated } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Animated, ActivityIndicator, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRef } from 'react';
+import { useRef, useEffect, useState } from 'react';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+
+const ONBOARDING_KEY = 'has_seen_onboarding_v2';
 
 function RoleCard({
   title,
@@ -76,6 +79,32 @@ function RoleCard({
 
 export default function RoleSelectionScreen() {
   const router = useRouter();
+  const [isCheckingOnboarding, setIsCheckingOnboarding] = useState(true);
+
+  useEffect(() => {
+    async function checkOnboardingStatus() {
+      try {
+        const hasSeenOnboarding = await AsyncStorage.getItem(ONBOARDING_KEY);
+        if (!hasSeenOnboarding) {
+          router.replace('/onboarding');
+          return;
+        }
+      } catch {
+        // On error, continue to home
+      } finally {
+        setIsCheckingOnboarding(false);
+      }
+    }
+    checkOnboardingStatus();
+  }, []);
+
+  if (isCheckingOnboarding) {
+    return (
+      <View style={styles.loadingContainer}>
+        <ActivityIndicator size="large" color="#6C5CE7" />
+      </View>
+    );
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -85,9 +114,12 @@ export default function RoleSelectionScreen() {
 
       {/* Main Header */}
       <View style={styles.header}>
-        <View style={styles.appBadge}>
-          <Text style={styles.appBadgeText}>🎈 Dunia Si Kecil 2-4 Tahun</Text>
-        </View>
+        <Pressable
+          onPress={() => router.push('/onboarding')}
+          style={styles.appBadge}
+        >
+          <Text style={styles.appBadgeText}>🎈 Dunia Si Kecil 2-4 Tahun • Panduan 📖</Text>
+        </Pressable>
         <Text style={styles.welcomeTitle}>Selamat Datang! 👋</Text>
         <Text style={styles.welcomeSubtitle}>Siapa yang sedang membuka aplikasi?</Text>
       </View>
@@ -117,15 +149,27 @@ export default function RoleSelectionScreen() {
         />
       </View>
 
-      {/* Footer hint */}
+      {/* Footer hint & Startup Website Link */}
       <View style={styles.footer}>
         <Text style={styles.footerText}>💡 Anda bisa berpindah mode kapan saja di dalam aplikasi</Text>
+        <Pressable
+          onPress={() => Linking.openURL('https://www.gapaidigital.my.id/')}
+          style={styles.startupLinkBtn}
+        >
+          <Text style={styles.startupLinkText}>🌐 Gapai Digital • www.gapaidigital.my.id</Text>
+        </Pressable>
       </View>
     </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    backgroundColor: '#FFFDF5',
+  },
   container: {
     flex: 1,
     backgroundColor: '#FFFDF5',
@@ -251,6 +295,7 @@ const styles = StyleSheet.create({
   footer: {
     alignItems: 'center',
     marginBottom: 10,
+    gap: 8,
   },
   footerText: {
     fontSize: 12,
@@ -258,4 +303,17 @@ const styles = StyleSheet.create({
     color: '#B2BEC3',
     textAlign: 'center',
   },
+  startupLinkBtn: {
+    backgroundColor: '#6C5CE7',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+    elevation: 2,
+  },
+  startupLinkText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
 });
+

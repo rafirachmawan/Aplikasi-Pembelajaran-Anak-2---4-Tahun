@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, Animated, Dimensions, FlatList } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Animated, Dimensions, FlatList, Linking } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRef, useState } from 'react';
@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const { width } = Dimensions.get('window');
 
-const ONBOARDING_KEY = 'has_seen_onboarding';
+const ONBOARDING_KEY = 'has_seen_onboarding_v2';
 
 const SLIDES = [
   {
@@ -49,6 +49,17 @@ const SLIDES = [
     accentColor: '#FFF9E6',
     iconRow: '⭐ 🏆 📈 🎉',
   },
+  {
+    id: '5',
+    emoji: '🛠️',
+    title: 'Customasi Aplikasi',
+    subtitle: 'Layanan Developer',
+    description: 'Mau customasi aplikasi ini? Hubungi Rafi Rachmawan (+62 85707185783)',
+    bgColor: '#0984E3',
+    accentColor: '#74B9FF',
+    iconRow: '📲 💻 🚀 💬',
+    isContactSlide: true,
+  },
 ];
 
 export default function OnboardingScreen() {
@@ -82,6 +93,14 @@ export default function OnboardingScreen() {
 
   const viewabilityConfig = useRef({ viewAreaCoveragePercentThreshold: 50 }).current;
 
+  const openWhatsApp = () => {
+    Linking.openURL('https://wa.me/6285707185783');
+  };
+
+  const openWebsite = () => {
+    Linking.openURL('https://www.gapaidigital.my.id/');
+  };
+
   const renderSlide = ({ item }: { item: typeof SLIDES[0] }) => (
     <View style={[styles.slide, { width }]}>
       {/* Decorative background circles */}
@@ -106,10 +125,26 @@ export default function OnboardingScreen() {
       {/* Description */}
       <Text style={styles.slideDescription}>{item.description}</Text>
 
-      {/* Icon Row */}
-      <View style={styles.iconRowContainer}>
-        <Text style={styles.iconRow}>{item.iconRow}</Text>
-      </View>
+      {/* Content depending on slide type */}
+      {item.isContactSlide ? (
+        <View style={styles.contactContainer}>
+          <Pressable style={styles.contactChip} onPress={openWhatsApp}>
+            <Text style={styles.contactChipEmoji}>💬</Text>
+            <View style={styles.contactChipTextGroup}>
+              <Text style={styles.contactChipName}>Rafi Rachmawan</Text>
+              <Text style={styles.contactChipSub}>+62 85707185783</Text>
+            </View>
+          </Pressable>
+
+          <Pressable style={styles.webChip} onPress={openWebsite}>
+            <Text style={styles.webChipText}>🌐 Gapai Digital (www.gapaidigital.my.id)</Text>
+          </Pressable>
+        </View>
+      ) : (
+        <View style={styles.iconRowContainer}>
+          <Text style={styles.iconRow}>{item.iconRow}</Text>
+        </View>
+      )}
     </View>
   );
 
@@ -177,6 +212,11 @@ export default function OnboardingScreen() {
           <Text style={[styles.nextButtonText, { color: SLIDES[currentIndex].bgColor }]}>
             {isLastSlide ? '🚀 Mulai Belajar!' : 'Lanjut ▶'}
           </Text>
+        </Pressable>
+
+        {/* Startup Footer Link */}
+        <Pressable onPress={openWebsite} style={styles.footerLinkContainer}>
+          <Text style={styles.footerLinkText}>🌐 Gapai Digital • www.gapaidigital.my.id</Text>
         </Pressable>
       </View>
     </SafeAreaView>
@@ -261,22 +301,22 @@ const styles = StyleSheet.create({
     letterSpacing: 0.5,
   },
   slideTitle: {
-    fontSize: 34,
+    fontSize: 32,
     fontWeight: '900',
     color: '#FFFFFF',
     textAlign: 'center',
-    marginBottom: 12,
+    marginBottom: 10,
     textShadowColor: 'rgba(0,0,0,0.1)',
     textShadowOffset: { width: 0, height: 2 },
     textShadowRadius: 4,
   },
   slideDescription: {
-    fontSize: 16,
+    fontSize: 15,
     fontWeight: '600',
-    color: 'rgba(255,255,255,0.92)',
+    color: 'rgba(255,255,255,0.95)',
     textAlign: 'center',
-    lineHeight: 24,
-    marginBottom: 20,
+    lineHeight: 22,
+    marginBottom: 16,
     paddingHorizontal: 8,
   },
   iconRowContainer: {
@@ -289,11 +329,59 @@ const styles = StyleSheet.create({
     fontSize: 28,
     letterSpacing: 6,
   },
+  contactContainer: {
+    width: '100%',
+    alignItems: 'center',
+    gap: 10,
+  },
+  contactChip: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FFFFFF',
+    paddingVertical: 10,
+    paddingHorizontal: 18,
+    borderRadius: 20,
+    gap: 12,
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.12,
+    shadowRadius: 6,
+  },
+  contactChipEmoji: {
+    fontSize: 24,
+  },
+  contactChipTextGroup: {
+    alignItems: 'flex-start',
+  },
+  contactChipName: {
+    fontSize: 15,
+    fontWeight: '900',
+    color: '#2D3436',
+  },
+  contactChipSub: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#0984E3',
+  },
+  webChip: {
+    backgroundColor: 'rgba(255,255,255,0.25)',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 16,
+    borderWidth: 1,
+    borderColor: 'rgba(255,255,255,0.4)',
+  },
+  webChipText: {
+    fontSize: 12,
+    fontWeight: '800',
+    color: '#FFFFFF',
+  },
   bottomBar: {
     alignItems: 'center',
     paddingHorizontal: 24,
-    paddingBottom: 24,
-    gap: 20,
+    paddingBottom: 16,
+    gap: 12,
   },
   dotsContainer: {
     flexDirection: 'row',
@@ -308,7 +396,7 @@ const styles = StyleSheet.create({
   nextButton: {
     backgroundColor: '#FFFFFF',
     borderRadius: 22,
-    paddingVertical: 16,
+    paddingVertical: 14,
     width: '100%',
     alignItems: 'center',
     elevation: 6,
@@ -322,5 +410,14 @@ const styles = StyleSheet.create({
   nextButtonText: {
     fontSize: 18,
     fontWeight: '900',
+  },
+  footerLinkContainer: {
+    paddingVertical: 4,
+  },
+  footerLinkText: {
+    fontSize: 12,
+    fontWeight: '700',
+    color: 'rgba(255,255,255,0.85)',
+    textDecorationLine: 'underline',
   },
 });
