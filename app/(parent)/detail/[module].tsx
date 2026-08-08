@@ -10,6 +10,11 @@ const MODULE_META: Record<string, { emoji: string; label: string; color: string 
   numbers: { emoji: '🔢', label: 'Angka', color: '#00B894' },
   letters: { emoji: '🔤', label: 'Huruf', color: '#FDCB6E' },
   shapes: { emoji: '🔷', label: 'Bentuk', color: '#6C5CE7' },
+  animals: { emoji: '🐾', label: 'Hewan', color: '#FD79A8' },
+  fruits: { emoji: '🍎', label: 'Buah & Sayur', color: '#FF7675' },
+  bodyparts: { emoji: '🦶', label: 'Bagian Tubuh', color: '#00CEC9' },
+  vehicles: { emoji: '🚗', label: 'Kendaraan', color: '#0984E3' },
+  jobs: { emoji: '👨‍⚕️', label: 'Profesi', color: '#E17055' },
 };
 
 const LEVEL_IDS = ['1', '2', '3', '4', '5'];

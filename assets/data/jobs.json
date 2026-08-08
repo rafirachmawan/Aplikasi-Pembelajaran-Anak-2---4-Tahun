@@ -1,0 +1,239 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Profesi di Sekitar Kita",
+      "questions": [
+        {
+          "id": 1, "instruction": "Siapa yang mengajar di sekolah? 👩‍🏫",
+          "options": [
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Siapa yang mengobati orang sakit? 👨‍⚕️",
+          "options": [
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Siapa yang menjaga keamanan? 👮",
+          "options": [
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Siapa yang memasak makanan enak? 👨‍🍳",
+          "options": [
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Siapa yang memadamkan api? 👨‍🚒",
+          "options": [
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Profesi Keren Lainnya",
+      "questions": [
+        {
+          "id": 1, "instruction": "Siapa yang menerbangkan pesawat? 👨‍✈️",
+          "options": [
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Siapa yang pergi ke luar angkasa? 👨‍🚀",
+          "options": [
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "👩‍🔬 Ilmuwan", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Siapa yang mengantar surat? 📮",
+          "options": [
+            { "label": "📮 Pak Pos", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Siapa yang menggambar bangunan? 👷",
+          "options": [
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👷 Arsitek", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "📮 Pak Pos", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Siapa yang merawat hewan? 🏥",
+          "options": [
+            { "label": "🏥 Dokter Hewan", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Profesi Seni & Olahraga",
+      "questions": [
+        {
+          "id": 1, "instruction": "Siapa yang melukis gambar cantik? 🎨",
+          "options": [
+            { "label": "🎨 Pelukis", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "🎵 Musisi", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "⚽ Atlet", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Siapa yang bermain musik? 🎵",
+          "options": [
+            { "label": "🎨 Pelukis", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "🎵 Musisi", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "📮 Pak Pos", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Siapa yang bermain bola? ⚽",
+          "options": [
+            { "label": "⚽ Atlet", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🎵 Musisi", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "🎨 Pelukis", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Siapa yang menari di panggung? 💃",
+          "options": [
+            { "label": "⚽ Atlet", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "💃 Penari", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "🎵 Musisi", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Siapa yang membuat kue cantik? 🎂",
+          "options": [
+            { "label": "🎂 Pembuat Kue", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "💃 Penari", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "🎨 Pelukis", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Alat Kerja Profesi",
+      "questions": [
+        {
+          "id": 1, "instruction": "Siapa yang pakai STETOSKOP?",
+          "options": [
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Siapa yang pakai PAPAN TULIS?",
+          "options": [
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Siapa yang pakai HELM PEMADAM?",
+          "options": [
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "👷 Arsitek", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Siapa yang pakai WAJAN dan SPATULA?",
+          "options": [
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Siapa yang pakai PELUIT dan BORGOL?",
+          "options": [
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Kalau Besar Mau Jadi Apa?",
+      "questions": [
+        {
+          "id": 1, "instruction": "Kalau suka menolong orang sakit, jadi?",
+          "options": [
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👨‍✈️ Pilot", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Kalau suka terbang tinggi di awan, jadi?",
+          "options": [
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Kalau suka masak makanan lezat, jadi?",
+          "options": [
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Kalau suka mengajar anak-anak, jadi?",
+          "options": [
+            { "label": "👨‍⚕️ Dokter", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👩‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "👮 Polisi", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Kalau suka menjelajah luar angkasa, jadi?",
+          "options": [
+            { "label": "👨‍🚀 Astronot", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "👨‍✈️ Pilot", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👨‍🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

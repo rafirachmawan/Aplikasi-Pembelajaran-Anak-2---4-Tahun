@@ -1,0 +1,254 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Wajah & Kepala",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana namanya MATA? 👀",
+          "options": [
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana namanya HIDUNG? 👃",
+          "options": [
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana namanya MULUT? 👄",
+          "options": [
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana namanya TELINGA? 👂",
+          "options": [
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Kita melihat pakai apa?",
+          "options": [
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Tangan & Kaki",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana namanya TANGAN? ✋",
+          "options": [
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "👆 Jari", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana namanya KAKI? 🦶",
+          "options": [
+            { "label": "👆 Jari", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana namanya JARI? 👆",
+          "options": [
+            { "label": "👆 Jari", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "💪 Lengan", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Kita berjalan pakai apa? 🚶",
+          "options": [
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "👆 Jari", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Kita menulis pakai apa? ✍️",
+          "options": [
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Fungsi Bagian Tubuh",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Kita mendengar pakai apa? 👂",
+          "options": [
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Kita mencium bau pakai apa? 👃",
+          "options": [
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Kita bicara dan makan pakai apa? 👄",
+          "options": [
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Kita berpikir pakai apa? 🧠",
+          "options": [
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🧠 Otak", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Kita memegang benda pakai apa? ✋",
+          "options": [
+            { "label": "✋ Tangan", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🦶 Kaki", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "👃 Hidung", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Panca Indera",
+      "questions": [
+        {
+          "id": 1, "instruction": "Indera PENGLIHATAN menggunakan?",
+          "options": [
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Indera PENDENGARAN menggunakan?",
+          "options": [
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Indera PENCIUMAN menggunakan?",
+          "options": [
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "✋ Tangan", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "👄 Mulut", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Indera PENGECAPAN (rasa) menggunakan?",
+          "options": [
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "👅 Lidah", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "👃 Hidung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Indera PERABA (sentuhan) menggunakan?",
+          "options": [
+            { "label": "✋ Kulit", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "👀 Mata", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "👂 Telinga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Bagian Tubuh",
+      "questions": [
+        {
+          "id": 1, "instruction": "Ada berapa MATA yang kita punya? 👀",
+          "options": [
+            { "label": "2️⃣ Dua", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "1️⃣ Satu", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "3️⃣ Tiga", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Ada berapa HIDUNG yang kita punya? 👃",
+          "options": [
+            { "label": "2️⃣ Dua", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "1️⃣ Satu", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "4️⃣ Empat", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Ada berapa JARI di satu tangan? 🖐️",
+          "options": [
+            { "label": "5️⃣ Lima", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "3️⃣ Tiga", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "2️⃣ Dua", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Ada berapa TELINGA yang kita punya? 👂",
+          "options": [
+            { "label": "1️⃣ Satu", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "2️⃣ Dua", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "3️⃣ Tiga", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Ada berapa MULUT yang kita punya? 👄",
+          "options": [
+            { "label": "1️⃣ Satu", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "2️⃣ Dua", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "5️⃣ Lima", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

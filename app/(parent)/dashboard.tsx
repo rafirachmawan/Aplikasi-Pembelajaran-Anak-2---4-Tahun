@@ -10,6 +10,11 @@ const MODULE_META = [
   { id: 'numbers' as const, emoji: '🔢', label: 'Angka', color: '#00B894', shadowColor: '#00876C', levelsTotal: 5 },
   { id: 'letters' as const, emoji: '🔤', label: 'Huruf', color: '#FDCB6E', shadowColor: '#E1A100', levelsTotal: 5 },
   { id: 'shapes' as const, emoji: '🔷', label: 'Bentuk', color: '#6C5CE7', shadowColor: '#4834D4', levelsTotal: 5 },
+  { id: 'animals' as const, emoji: '🐾', label: 'Hewan', color: '#FD79A8', shadowColor: '#E84393', levelsTotal: 5 },
+  { id: 'fruits' as const, emoji: '🍎', label: 'Buah & Sayur', color: '#FF7675', shadowColor: '#D63031', levelsTotal: 5 },
+  { id: 'bodyparts' as const, emoji: '🦶', label: 'Bagian Tubuh', color: '#00CEC9', shadowColor: '#00B894', levelsTotal: 5 },
+  { id: 'vehicles' as const, emoji: '🚗', label: 'Kendaraan', color: '#0984E3', shadowColor: '#005691', levelsTotal: 5 },
+  { id: 'jobs' as const, emoji: '👨‍⚕️', label: 'Profesi', color: '#E17055', shadowColor: '#D63031', levelsTotal: 5 },
 ];
 
 export default function ParentDashboard() {

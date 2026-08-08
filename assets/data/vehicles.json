@@ -1,0 +1,239 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Kendaraan di Jalan Raya",
+      "questions": [
+        {
+          "id": 1, "instruction": "Mana yang namanya MOBIL? 🚗",
+          "options": [
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🏍️ Motor", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Mana yang namanya BUS? 🚌",
+          "options": [
+            { "label": "🏍️ Motor", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Mana yang namanya MOTOR? 🏍️",
+          "options": [
+            { "label": "🏍️ Motor", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🚲 Sepeda", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Mana yang namanya SEPEDA? 🚲",
+          "options": [
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🚲 Sepeda", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🏍️ Motor", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Mana yang namanya TRUK? 🚛",
+          "options": [
+            { "label": "🚛 Truk", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Kendaraan Udara & Air",
+      "questions": [
+        {
+          "id": 1, "instruction": "Mana yang namanya PESAWAT? ✈️",
+          "options": [
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false },
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Mana yang namanya HELIKOPTER? 🚁",
+          "options": [
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Mana yang namanya KAPAL? 🚢",
+          "options": [
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🛶 Perahu", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Mana yang namanya PERAHU? 🛶",
+          "options": [
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🛶 Perahu", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Mana yang namanya ROKET? 🚀",
+          "options": [
+            { "label": "🚀 Roket", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Kendaraan di Rel & Jalur Khusus",
+      "questions": [
+        {
+          "id": 1, "instruction": "Mana yang namanya KERETA API? 🚂",
+          "options": [
+            { "label": "🚂 Kereta Api", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Mana yang namanya AMBULANS? 🚑",
+          "options": [
+            { "label": "🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🚑 Ambulans", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🚓 Polisi", "color": "#2D3436", "shadowColor": "#000000", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Mana yang namanya MOBIL PEMADAM? 🚒",
+          "options": [
+            { "label": "🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🚑 Ambulans", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Mana yang namanya MOBIL POLISI? 🚓",
+          "options": [
+            { "label": "🚑 Ambulans", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🚓 Polisi", "color": "#2D3436", "shadowColor": "#000000", "correct": true },
+            { "label": "🚒 Pemadam", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Mana yang namanya TAKSI? 🚕",
+          "options": [
+            { "label": "🚕 Taksi", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🚓 Polisi", "color": "#2D3436", "shadowColor": "#000000", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Tempat Kendaraan Berjalan",
+      "questions": [
+        {
+          "id": 1, "instruction": "Kendaraan apa yang terbang di UDARA? ✈️",
+          "options": [
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Kendaraan apa yang berlayar di AIR? 🚢",
+          "options": [
+            { "label": "🚂 Kereta Api", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Kendaraan apa yang berjalan di REL? 🚂",
+          "options": [
+            { "label": "🚂 Kereta Api", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Kendaraan apa yang pergi ke LUAR ANGKASA? 🚀",
+          "options": [
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🚀 Roket", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "🚁 Helikopter", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Kendaraan apa yang dikayuh pakai KAKI? 🚲",
+          "options": [
+            { "label": "🚲 Sepeda", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🏍️ Motor", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Kendaraan",
+      "questions": [
+        {
+          "id": 1, "instruction": "Kendaraan mana yang paling BESAR?",
+          "options": [
+            { "label": "🚢 Kapal", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🚲 Sepeda", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2, "instruction": "Kendaraan mana yang paling CEPAT?",
+          "options": [
+            { "label": "🚲 Sepeda", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🚀 Roket", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 3, "instruction": "Siapa yang mengendarai AMBULANS? 🚑",
+          "options": [
+            { "label": "🧑‍⚕️ Paramedis", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "👨‍🍳 Koki", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "👨‍🏫 Guru", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 4, "instruction": "Kendaraan mana yang TIDAK pakai roda?",
+          "options": [
+            { "label": "🚗 Mobil", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🛶 Perahu", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🚌 Bus", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5, "instruction": "Kendaraan mana yang punya SAYAP?",
+          "options": [
+            { "label": "✈️ Pesawat", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🚂 Kereta Api", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🚛 Truk", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

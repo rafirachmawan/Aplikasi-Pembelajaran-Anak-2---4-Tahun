@@ -18,6 +18,11 @@ export interface AppProgress {
   numbers: ModuleProgress;
   letters: ModuleProgress;
   shapes: ModuleProgress;
+  animals: ModuleProgress;
+  fruits: ModuleProgress;
+  bodyparts: ModuleProgress;
+  vehicles: ModuleProgress;
+  jobs: ModuleProgress;
 }
 
 const DEFAULT_PROGRESS: AppProgress = {
@@ -25,6 +30,11 @@ const DEFAULT_PROGRESS: AppProgress = {
   numbers: {},
   letters: {},
   shapes: {},
+  animals: {},
+  fruits: {},
+  bodyparts: {},
+  vehicles: {},
+  jobs: {},
 };
 
 export async function getProgress(): Promise<AppProgress> {

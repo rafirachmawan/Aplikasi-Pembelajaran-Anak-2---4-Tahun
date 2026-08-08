@@ -1,0 +1,264 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Hewan Peliharaan",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya KUCING? 🐱",
+          "options": [
+            { "label": "🐱 Kucing", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🐰 Kelinci", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya ANJING? 🐶",
+          "options": [
+            { "label": "🐱 Kucing", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🐹 Hamster", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya KELINCI? 🐰",
+          "options": [
+            { "label": "🐰 Kelinci", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "🐱 Kucing", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐦 Burung", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya IKAN? 🐟",
+          "options": [
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🐟 Ikan", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "🐱 Kucing", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya BURUNG? 🐦",
+          "options": [
+            { "label": "🐦 Burung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🐰 Kelinci", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "🐟 Ikan", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Hewan di Kebun Binatang",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya GAJAH? 🐘",
+          "options": [
+            { "label": "🐘 Gajah", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🦁 Singa", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🐒 Monyet", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya SINGA? 🦁",
+          "options": [
+            { "label": "🐘 Gajah", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🦁 Singa", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🦒 Jerapah", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya MONYET? 🐒",
+          "options": [
+            { "label": "🐒 Monyet", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🦁 Singa", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🐘 Gajah", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya JERAPAH? 🦒",
+          "options": [
+            { "label": "🐒 Monyet", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🦒 Jerapah", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🦁 Singa", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya ZEBRA? 🦓",
+          "options": [
+            { "label": "🦓 Zebra", "color": "#2D3436", "shadowColor": "#000000", "correct": true },
+            { "label": "🐘 Gajah", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🦒 Jerapah", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Hewan di Air & Laut",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya LUMBA-LUMBA? 🐬",
+          "options": [
+            { "label": "🐬 Lumba-Lumba", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🐢 Penyu", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🦈 Hiu", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya PENYU? 🐢",
+          "options": [
+            { "label": "🐬 Lumba-Lumba", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🐢 Penyu", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🐙 Gurita", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya GURITA? 🐙",
+          "options": [
+            { "label": "🐙 Gurita", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "🦈 Hiu", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🐬 Lumba-Lumba", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya KEPITING? 🦀",
+          "options": [
+            { "label": "🐢 Penyu", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🦀 Kepiting", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "🐙 Gurita", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya HIU? 🦈",
+          "options": [
+            { "label": "🦈 Hiu", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🦀 Kepiting", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐬 Lumba-Lumba", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Hewan Serangga & Kecil",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya KUPU-KUPU? 🦋",
+          "options": [
+            { "label": "🦋 Kupu-Kupu", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "🐝 Lebah", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🐜 Semut", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya LEBAH? 🐝",
+          "options": [
+            { "label": "🐜 Semut", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐝 Lebah", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🦋 Kupu-Kupu", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya SEMUT? 🐜",
+          "options": [
+            { "label": "🐜 Semut", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🐌 Siput", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🐝 Lebah", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya SIPUT? 🐌",
+          "options": [
+            { "label": "🦋 Kupu-Kupu", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "🐌 Siput", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🐜 Semut", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya LABA-LABA? 🕷️",
+          "options": [
+            { "label": "🕷️ Laba-Laba", "color": "#2D3436", "shadowColor": "#000000", "correct": true },
+            { "label": "🐌 Siput", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🐝 Lebah", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Suara Hewan (Tebak Suaranya!)",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Hewan apa yang bersuara: KUKURUYUUUK? 🐓",
+          "options": [
+            { "label": "🐓 Ayam", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🐱 Kucing", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Hewan apa yang bersuara: MEOOONG? 🐱",
+          "options": [
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "🐱 Kucing", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "🐓 Ayam", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Hewan apa yang bersuara: GUK GUK? 🐶",
+          "options": [
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "🐸 Katak", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🐱 Kucing", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Hewan apa yang bersuara: MOOO? 🐄",
+          "options": [
+            { "label": "🐓 Ayam", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐄 Sapi", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🐶 Anjing", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Hewan apa yang bersuara: KWEK KWEK? 🦆",
+          "options": [
+            { "label": "🦆 Bebek", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🐄 Sapi", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🐸 Katak", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

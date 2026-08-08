@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, Animated } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Animated, ScrollView } from 'react-native';
 import { useRouter, type Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRef } from 'react';
@@ -11,7 +11,7 @@ const MODULES = [
     subLabel: 'Merah, Biru, Kuning',
     color: '#FF5252',
     shadowColor: '#D32F2F',
-    badge: '⭐ 3 Level',
+    badge: '⭐ 5 Level',
     route: '/(child)/colors' as const,
   },
   {
@@ -21,7 +21,7 @@ const MODULES = [
     subLabel: 'Hitung 1 sampai 10',
     color: '#00B894',
     shadowColor: '#00876C',
-    badge: '⭐ 3 Level',
+    badge: '⭐ 5 Level',
     route: '/(child)/numbers' as const,
   },
   {
@@ -31,7 +31,7 @@ const MODULES = [
     subLabel: 'Abjad A sampai Z',
     color: '#FDCB6E',
     shadowColor: '#E1A100',
-    badge: '⭐ 3 Level',
+    badge: '⭐ 5 Level',
     route: '/(child)/letters' as const,
   },
   {
@@ -41,8 +41,58 @@ const MODULES = [
     subLabel: 'Lingkaran, Persegi & Bintang',
     color: '#6C5CE7',
     shadowColor: '#4834D4',
-    badge: '⭐ 3 Level',
+    badge: '⭐ 5 Level',
     route: '/(child)/shapes' as const,
+  },
+  {
+    id: 'animals',
+    title: '🐾',
+    label: 'Hewan',
+    subLabel: 'Kucing, Gajah & Suara Hewan',
+    color: '#FD79A8',
+    shadowColor: '#E84393',
+    badge: '⭐ 5 Level',
+    route: '/(child)/animals' as const,
+  },
+  {
+    id: 'fruits',
+    title: '🍎',
+    label: 'Buah & Sayur',
+    subLabel: 'Apel, Wortel & Sayuran',
+    color: '#FF7675',
+    shadowColor: '#D63031',
+    badge: '⭐ 5 Level',
+    route: '/(child)/fruits' as const,
+  },
+  {
+    id: 'bodyparts',
+    title: '🦶',
+    label: 'Bagian Tubuh',
+    subLabel: 'Mata, Hidung & Panca Indera',
+    color: '#00CEC9',
+    shadowColor: '#00B894',
+    badge: '⭐ 5 Level',
+    route: '/(child)/bodyparts' as const,
+  },
+  {
+    id: 'vehicles',
+    title: '🚗',
+    label: 'Kendaraan',
+    subLabel: 'Mobil, Pesawat & Kereta',
+    color: '#0984E3',
+    shadowColor: '#005691',
+    badge: '⭐ 5 Level',
+    route: '/(child)/vehicles' as const,
+  },
+  {
+    id: 'jobs',
+    title: '👨‍⚕️',
+    label: 'Profesi',
+    subLabel: 'Guru, Dokter & Astronot',
+    color: '#E17055',
+    shadowColor: '#D63031',
+    badge: '⭐ 5 Level',
+    route: '/(child)/jobs' as const,
   },
 ];
 
@@ -125,23 +175,25 @@ export default function ChildHome() {
         </Pressable>
       </View>
 
-      {/* Banner Section */}
-      <View style={styles.bannerContainer}>
-        <Text style={styles.mainTitle}>Mau Belajar Apa?</Text>
-        <Text style={styles.mainSubtitle}>Pilih salah satu tombol seru di bawah ya! 👇</Text>
-      </View>
+      <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollContainer}>
+        {/* Banner Section */}
+        <View style={styles.bannerContainer}>
+          <Text style={styles.mainTitle}>Mau Belajar Apa?</Text>
+          <Text style={styles.mainSubtitle}>Pilih salah satu tombol seru di bawah ya! 👇</Text>
+        </View>
 
-      {/* Module Cards */}
-      <View style={styles.cardsContainer}>
-        {MODULES.map((module) => (
-          <ModuleCard key={module.id} module={module} />
-        ))}
-      </View>
+        {/* Module Cards */}
+        <View style={styles.cardsContainer}>
+          {MODULES.map((module) => (
+            <ModuleCard key={module.id} module={module} />
+          ))}
+        </View>
 
-      {/* Bottom Footer Encouragement */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>🎈 Belajar Sambil Bermain Every Day!</Text>
-      </View>
+        {/* Bottom Footer Encouragement */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>🎈 Belajar Sambil Bermain Every Day!</Text>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -150,8 +202,10 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFDF5',
+  },
+  scrollContainer: {
     paddingHorizontal: 20,
-    justifyContent: 'space-between',
+    paddingBottom: 24,
   },
   bgCircle: {
     position: 'absolute',
@@ -178,6 +232,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingTop: 16,
     paddingBottom: 8,
+    paddingHorizontal: 20,
   },
   greetingChip: {
     backgroundColor: '#FFEAA7',
@@ -206,6 +261,7 @@ const styles = StyleSheet.create({
   bannerContainer: {
     alignItems: 'center',
     paddingVertical: 12,
+    marginBottom: 10,
   },
   mainTitle: {
     fontSize: 32,
@@ -222,8 +278,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   cardsContainer: {
-    flex: 1,
-    justifyContent: 'center',
     gap: 16,
     paddingVertical: 12,
   },
@@ -287,7 +341,8 @@ const styles = StyleSheet.create({
   },
   footer: {
     alignItems: 'center',
-    paddingBottom: 16,
+    paddingTop: 24,
+    paddingBottom: 8,
   },
   footerText: {
     fontSize: 13,

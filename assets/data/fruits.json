@@ -1,0 +1,264 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Buah Favorit Anak-Anak",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya APEL? 🍎",
+          "options": [
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🍇 Anggur", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya PISANG? 🍌",
+          "options": [
+            { "label": "🍊 Jeruk", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya JERUK? 🍊",
+          "options": [
+            { "label": "🍊 Jeruk", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🍇 Anggur", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya ANGGUR? 🍇",
+          "options": [
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🍇 Anggur", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "🍊 Jeruk", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya SEMANGKA? 🍉",
+          "options": [
+            { "label": "🍉 Semangka", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Buah Tropis Segar",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya MANGGA? 🥭",
+          "options": [
+            { "label": "🥭 Mangga", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🍑 Persik", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "🍋 Lemon", "color": "#F1C40F", "shadowColor": "#D4AC0D", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya STRAWBERRY? 🍓",
+          "options": [
+            { "label": "🍋 Lemon", "color": "#F1C40F", "shadowColor": "#D4AC0D", "correct": false },
+            { "label": "🍓 Strawberry", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🥭 Mangga", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya LEMON? 🍋",
+          "options": [
+            { "label": "🍋 Lemon", "color": "#F1C40F", "shadowColor": "#D4AC0D", "correct": true },
+            { "label": "🍓 Strawberry", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🍑 Persik", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya KELAPA? 🥥",
+          "options": [
+            { "label": "🍓 Strawberry", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🥥 Kelapa", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🥭 Mangga", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya MELON? 🍈",
+          "options": [
+            { "label": "🍈 Melon", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🥥 Kelapa", "color": "#636E72", "shadowColor": "#2D3436", "correct": false },
+            { "label": "🍋 Lemon", "color": "#F1C40F", "shadowColor": "#D4AC0D", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Sayuran Bergizi",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang namanya WORTEL? 🥕",
+          "options": [
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang namanya BROKOLI? 🥦",
+          "options": [
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana yang namanya JAGUNG? 🌽",
+          "options": [
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🍅 Tomat", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana yang namanya TOMAT? 🍅",
+          "options": [
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🍅 Tomat", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana yang namanya TERONG? 🍆",
+          "options": [
+            { "label": "🍆 Terong", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "🍅 Tomat", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Warna Buah & Sayur",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Buah apa yang berwarna KUNING? 🍌",
+          "options": [
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🍇 Anggur", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sayuran apa yang berwarna ORANYE? 🥕",
+          "options": [
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🍆 Terong", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Buah apa yang berwarna HIJAU di dalamnya? 🍉",
+          "options": [
+            { "label": "🍉 Semangka", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🥝 Kiwi", "color": "#00B894", "shadowColor": "#00876C", "correct": true }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sayuran apa yang berwarna UNGU? 🍆",
+          "options": [
+            { "label": "🍆 Terong", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Buah apa yang berwarna MERAH? 🍓",
+          "options": [
+            { "label": "🍓 Strawberry", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🍈 Melon", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Buah & Sayur",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana yang BUAH, bukan sayur?",
+          "options": [
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana yang SAYURAN, bukan buah?",
+          "options": [
+            { "label": "🍌 Pisang", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "🍇 Anggur", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Buah apa yang kulitnya HIJAU dan dalamnya MERAH? 🍉",
+          "options": [
+            { "label": "🍉 Semangka", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "🍎 Apel", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "🥥 Kelapa", "color": "#636E72", "shadowColor": "#2D3436", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana sayuran yang tumbuh di DALAM TANAH? 🥕",
+          "options": [
+            { "label": "🥦 Brokoli", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "🥕 Wortel", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "🌽 Jagung", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Buah apa yang ada di pohon KELAPA? 🥥",
+          "options": [
+            { "label": "🥥 Kelapa", "color": "#636E72", "shadowColor": "#2D3436", "correct": true },
+            { "label": "🥭 Mangga", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "🍓 Strawberry", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
