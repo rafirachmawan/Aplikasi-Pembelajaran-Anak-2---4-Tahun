@@ -96,6 +96,45 @@ const MODULES = [
   },
 ];
 
+const GAMES = [
+  {
+    id: 'balloon',
+    emoji: '🎈',
+    label: 'Pecah Balon',
+    desc: 'Melatih respon & warna',
+    color: '#FF7675',
+    shadowColor: '#D63031',
+    route: '/(child)/balloon' as const,
+  },
+  {
+    id: 'sorting',
+    emoji: '🧺',
+    label: 'Seret & Sortir',
+    desc: 'Pilah benda ke wadah',
+    color: '#00CEC9',
+    shadowColor: '#00B894',
+    route: '/(child)/sorting' as const,
+  },
+  {
+    id: 'tracing',
+    emoji: '✏️',
+    label: 'Belajar Menulis',
+    desc: 'Tulis huruf & angka',
+    color: '#FDCB6E',
+    shadowColor: '#E1A100',
+    route: '/(child)/tracing' as const,
+  },
+  {
+    id: 'soundboard',
+    emoji: '🔊',
+    label: 'Papan Suara',
+    desc: 'Suara hewan & benda',
+    color: '#6C5CE7',
+    shadowColor: '#4834D4',
+    route: '/(child)/soundboard' as const,
+  },
+];
+
 function ModuleCard({ 
   module, 
 }: { 
@@ -187,6 +226,30 @@ export default function ChildHome() {
           {MODULES.map((module) => (
             <ModuleCard key={module.id} module={module} />
           ))}
+        </View>
+
+        {/* Mini Games Section */}
+        <View style={styles.gamesSection}>
+          <View style={styles.gamesSectionHeader}>
+            <Text style={styles.gamesSectionTitle}>🎮 Mini Games</Text>
+            <View style={styles.gamesBadge}>
+              <Text style={styles.gamesBadgeText}>SERU!</Text>
+            </View>
+          </View>
+
+          <View style={styles.gamesGrid}>
+            {GAMES.map((game) => (
+              <Pressable
+                key={game.id}
+                onPress={() => router.push(game.route as Href)}
+                style={[styles.gameCard, { backgroundColor: game.color, borderBottomColor: game.shadowColor }]}
+              >
+                <Text style={styles.gameEmoji}>{game.emoji}</Text>
+                <Text style={styles.gameLabel}>{game.label}</Text>
+                <Text style={styles.gameDesc}>{game.desc}</Text>
+              </Pressable>
+            ))}
+          </View>
         </View>
 
         {/* Bottom Footer Encouragement */}
@@ -348,5 +411,61 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '700',
     color: '#B2BEC3',
+  },
+  gamesSection: {
+    marginTop: 28,
+  },
+  gamesSectionHeader: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 14,
+  },
+  gamesSectionTitle: {
+    fontSize: 22,
+    fontWeight: '900',
+    color: '#2D3436',
+  },
+  gamesBadge: {
+    backgroundColor: '#FFEAA7',
+    paddingVertical: 4,
+    paddingHorizontal: 12,
+    borderRadius: 12,
+  },
+  gamesBadgeText: {
+    fontSize: 12,
+    fontWeight: '900',
+    color: '#D63031',
+  },
+  gamesGrid: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    gap: 12,
+  },
+  gameCard: {
+    width: '48%',
+    borderRadius: 24,
+    padding: 16,
+    borderBottomWidth: 5,
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 3 },
+    shadowOpacity: 0.1,
+    shadowRadius: 5,
+  },
+  gameEmoji: {
+    fontSize: 36,
+    marginBottom: 8,
+  },
+  gameLabel: {
+    fontSize: 17,
+    fontWeight: '900',
+    color: '#FFFFFF',
+  },
+  gameDesc: {
+    fontSize: 11,
+    fontWeight: '700',
+    color: 'rgba(255,255,255,0.9)',
+    marginTop: 2,
   },
 });

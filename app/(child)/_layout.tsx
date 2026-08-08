@@ -27,6 +27,13 @@ export default function ChildLayout() {
       <Stack.Screen name="vehicles/[level]" />
       <Stack.Screen name="jobs/index" />
       <Stack.Screen name="jobs/[level]" />
+      <Stack.Screen name="balloon/index" />
+      <Stack.Screen name="balloon/[category]" />
+      <Stack.Screen name="sorting/index" />
+      <Stack.Screen name="sorting/[level]" />
+      <Stack.Screen name="tracing/index" />
+      <Stack.Screen name="tracing/[char]" />
+      <Stack.Screen name="soundboard/index" />
     </Stack>
   );
 }
