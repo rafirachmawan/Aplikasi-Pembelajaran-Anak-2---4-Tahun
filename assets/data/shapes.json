@@ -1,0 +1,264 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Bentuk Dasar: Lingkaran, Persegi, Segitiga, Bintang, Hati",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh yang berbentuk LINGKARAN! 🔴",
+          "options": [
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "Segitiga 🔺", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh yang berbentuk PERSEGI! 🟦",
+          "options": [
+            { "label": "Segitiga 🔺", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh yang berbentuk SEGITIGA! 🔺",
+          "options": [
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "Segitiga 🔺", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berbentuk BINTANG! ⭐",
+          "options": [
+            { "label": "Bintang ⭐", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh yang berbentuk HATI! 💖",
+          "options": [
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "Bintang ⭐", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Bentuk Lengkung & Alam: Oval, Segi Lima, Bulan, Awan, Segi Enam",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh yang berbentuk OVAL! 🥚",
+          "options": [
+            { "label": "Oval 🥚", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "Bintang ⭐", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh yang berbentuk SEGI LIMA! 🔷",
+          "options": [
+            { "label": "Bulan 🌙", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Segi Lima 🔷", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "Awan ☁️", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh yang berbentuk BULAN! 🌙",
+          "options": [
+            { "label": "Bulan 🌙", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Segi Enam 🛑", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "Oval 🥚", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berbentuk AWAN! ☁️",
+          "options": [
+            { "label": "Segi Lima 🔷", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "Awan ☁️", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "Bulan 🌙", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh yang berbentuk SEGI ENAM! 🛑",
+          "options": [
+            { "label": "Segi Enam 🛑", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "Oval 🥚", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Awan ☁️", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Bentuk Unik: Belah Ketupat, Panah, Plus, Tabung, Kerucut",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh BELAH KETUPAT! 🔹",
+          "options": [
+            { "label": "Belah Ketupat 🔹", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "Tanda Panah ➡️", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "Tanda Plus ➕", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh TANDA PANAH! ➡️",
+          "options": [
+            { "label": "Tabung 🛢️", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "Tanda Panah ➡️", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "Belah Ketupat 🔹", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh TANDA PLUS! ➕",
+          "options": [
+            { "label": "Tanda Plus ➕", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "Kerucut 🍦", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Tanda Panah ➡️", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berbentuk TABUNG! 🛢️",
+          "options": [
+            { "label": "Belah Ketupat 🔹", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "Tabung 🛢️", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "Kerucut 🍦", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh berbentuk KERUCUT! 🍦",
+          "options": [
+            { "label": "Kerucut 🍦", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Tanda Plus ➕", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Tabung 🛢️", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Cari Bentuk Benda di Sekitar",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Bentuk Roda Sepeda? 🚴‍♂️",
+          "options": [
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "Segitiga 🔺", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Bentuk Jendela Rumah? 🪟",
+          "options": [
+            { "label": "Segitiga 🔺", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Bentuk Potongan Pizza? 🍕",
+          "options": [
+            { "label": "Segitiga 🔺", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Bentuk Telur Ayam? 🥚",
+          "options": [
+            { "label": "Bintang ⭐", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Oval 🥚", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Bentuk Es Krim Cone? 🍦",
+          "options": [
+            { "label": "Kerucut 🍦", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Awan ☁️", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Bentuk: Pemantapan Semua Bentuk",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana bentuk BINTANG ⭐?",
+          "options": [
+            { "label": "Bintang ⭐", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "Segi Lima 🔷", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana bentuk HATI 💖?",
+          "options": [
+            { "label": "Awan ☁️", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "Belah Ketupat 🔹", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana bentuk LINGKARAN 🔴?",
+          "options": [
+            { "label": "Lingkaran 🔴", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "Bulan 🌙", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Segitiga 🔺", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana bentuk BULAN 🌙?",
+          "options": [
+            { "label": "Oval 🥚", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Bulan 🌙", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "Persegi 🟦", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana bentuk SEGI LIMA 🔷?",
+          "options": [
+            { "label": "Segi Lima 🔷", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "Kerucut 🍦", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Hati 💖", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,264 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Mengenal Angka 1 sampai 5",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Angka 1? 🔢",
+          "options": [
+            { "label": "1", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "2", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "3", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Angka 2? 🔢",
+          "options": [
+            { "label": "4", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "2", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "1", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Angka 3? 🔢",
+          "options": [
+            { "label": "3", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": true },
+            { "label": "5", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "2", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Angka 4? 🔢",
+          "options": [
+            { "label": "1", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "4", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "3", "color": "#74B9FF", "shadowColor": "#0984E3", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Angka 5? 🔢",
+          "options": [
+            { "label": "5", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "4", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false },
+            { "label": "2", "color": "#FF7675", "shadowColor": "#D63031", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Mengenal Angka 6 sampai 10",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Angka 6? 🔢",
+          "options": [
+            { "label": "6", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "7", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false },
+            { "label": "8", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Angka 7? 🔢",
+          "options": [
+            { "label": "9", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "7", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "6", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Angka 8? 🔢",
+          "options": [
+            { "label": "8", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "10", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "7", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Angka 9? 🔢",
+          "options": [
+            { "label": "6", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "9", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "8", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Angka 10? 🔢",
+          "options": [
+            { "label": "10", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "9", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "7", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Hitung Jumlah Benda (1-5)",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Ada berapa buah Apel? 🍎",
+          "options": [
+            { "label": "1", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "3", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "2", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Hitung jumlah Bintang ini: ⭐ ⭐",
+          "options": [
+            { "label": "4", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "2", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "1", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Hitung jumlah Balon ini: 🎈 🎈 🎈",
+          "options": [
+            { "label": "3", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "5", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "2", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Hitung jumlah Ikan ini: 🐟 🐟 🐟 🐟",
+          "options": [
+            { "label": "2", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "4", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "3", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Hitung jumlah Bunga ini: 🌸 🌸 🌸 🌸 🌸",
+          "options": [
+            { "label": "5", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "4", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false },
+            { "label": "1", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Hitung Jumlah Benda Banyak (6-10)",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Hitung Mobil ini: 🚗 🚗 🚗 🚗 🚗 🚗",
+          "options": [
+            { "label": "6", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": true },
+            { "label": "8", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "5", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Hitung Permen ini: 🍬 🍬 🍬 🍬 🍬 🍬 🍬",
+          "options": [
+            { "label": "6", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "7", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "9", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Hitung Bola ini: ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ ⚽ ⚽",
+          "options": [
+            { "label": "8", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "10", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "7", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Hitung Lebah ini: 🐝 🐝 🐝 🐝 🐝 🐝 🐝 🐝 🐝",
+          "options": [
+            { "label": "7", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "9", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "8", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Hitung Bintang ini: ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐ ⭐",
+          "options": [
+            { "label": "10", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "9", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "6", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Angka & Berhitung Cepat",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Angka 5? 🔢",
+          "options": [
+            { "label": "5", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "2", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "8", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Hitung Jeruk ini: 🍊 🍊 🍊",
+          "options": [
+            { "label": "1", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "3", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "5", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Angka 10? 🔟",
+          "options": [
+            { "label": "10", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "1", "color": "#FF5252", "shadowColor": "#D32F2F", "correct": false },
+            { "label": "7", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Hitung Kucing ini: 🐱 🐱 🐱 🐱",
+          "options": [
+            { "label": "2", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "4", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "3", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Hitung Anak Ayam ini: 🐥 🐥 🐥 🐥 🐥 🐥",
+          "options": [
+            { "label": "6", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "4", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "5", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

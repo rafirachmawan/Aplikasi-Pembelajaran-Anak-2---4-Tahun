@@ -1,0 +1,289 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Huruf A sampai E",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Huruf A? 🔤",
+          "hint": "🐔 Ayam",
+          "options": [
+            { "label": "A", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "B", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "C", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Huruf B? 🔤",
+          "hint": "🐻 Beruang",
+          "options": [
+            { "label": "D", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "B", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "A", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Huruf C? 🔤",
+          "hint": "🐱 Cacing / Cumi",
+          "options": [
+            { "label": "C", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "E", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "B", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Huruf D? 🔤",
+          "hint": "🐬 Domba / Dinosaurus",
+          "options": [
+            { "label": "A", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "D", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "C", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Huruf E? 🔤",
+          "hint": "🐘 Elang / Gajah (Elang)",
+          "options": [
+            { "label": "E", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "B", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "D", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Huruf F sampai J",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Huruf F? 🔤",
+          "hint": "🦩 Flamingo",
+          "options": [
+            { "label": "F", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "G", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "H", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Huruf G? 🔤",
+          "hint": "🐘 Gajah",
+          "options": [
+            { "label": "I", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "G", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "F", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Huruf H? 🔤",
+          "hint": "🐅 Harimau",
+          "options": [
+            { "label": "H", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "J", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "G", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Huruf I? 🔤",
+          "hint": "🐟 Ikan",
+          "options": [
+            { "label": "F", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "I", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "H", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Huruf J? 🔤",
+          "hint": "🦒 Jerapah",
+          "options": [
+            { "label": "J", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "G", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "I", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Huruf K sampai O",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Huruf K? 🔤",
+          "hint": "🐱 Kucing / Kelinci",
+          "options": [
+            { "label": "K", "color": "#E17055", "shadowColor": "#D63031", "correct": true },
+            { "label": "L", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false },
+            { "label": "M", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Huruf L? 🔤",
+          "hint": "🐝 Lebah / Singa (Lion)",
+          "options": [
+            { "label": "N", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "L", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "K", "color": "#E17055", "shadowColor": "#D63031", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Huruf M? 🔤",
+          "hint": "🐒 Monyet",
+          "options": [
+            { "label": "M", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": true },
+            { "label": "O", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false },
+            { "label": "L", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Huruf N? 🔤",
+          "hint": "🐉 Naga",
+          "options": [
+            { "label": "K", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "N", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "M", "color": "#A29BFE", "shadowColor": "#6C5CE7", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Huruf O? 🔤",
+          "hint": "🦧 Orangutan",
+          "options": [
+            { "label": "O", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "N", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "L", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Huruf P sampai T",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Huruf P? 🔤",
+          "hint": "🐧 Penguin / Paus",
+          "options": [
+            { "label": "P", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
+            { "label": "Q", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "R", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Huruf Q? 🔤",
+          "hint": "👑 Queen (Ratu)",
+          "options": [
+            { "label": "S", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "Q", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "P", "color": "#0984E3", "shadowColor": "#005691", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Huruf R? 🔤",
+          "hint": "🦏 Rusa / Rhino",
+          "options": [
+            { "label": "R", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "T", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "Q", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Huruf S? 🔤",
+          "hint": "🦁 Sapi / Singa",
+          "options": [
+            { "label": "P", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
+            { "label": "S", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },
+            { "label": "R", "color": "#00B894", "shadowColor": "#00876C", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Huruf T? 🔤",
+          "hint": "🐢 Penyu / Tikus / Tupai",
+          "options": [
+            { "label": "T", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "S", "color": "#FF7675", "shadowColor": "#D63031", "correct": false },
+            { "label": "Q", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Huruf U sampai Z (Penutup Abjad)",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana Huruf U? 🔤",
+          "hint": "🐍 Ular",
+          "options": [
+            { "label": "U", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
+            { "label": "V", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false },
+            { "label": "W", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana Huruf V? 🔤",
+          "hint": "🎻 Biola (Vio)",
+          "options": [
+            { "label": "X", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
+            { "label": "V", "color": "#00CEC9", "shadowColor": "#00B894", "correct": true },
+            { "label": "U", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana Huruf W? 🔤",
+          "hint": "🦛 Walrus / Wortel",
+          "options": [
+            { "label": "W", "color": "#FD79A8", "shadowColor": "#E84393", "correct": true },
+            { "label": "Y", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false },
+            { "label": "V", "color": "#00CEC9", "shadowColor": "#00B894", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana Huruf Y? 🔤",
+          "hint": "🍦 Yoghurt / Yo-yo",
+          "options": [
+            { "label": "Z", "color": "#00B894", "shadowColor": "#00876C", "correct": false },
+            { "label": "Y", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": true },
+            { "label": "W", "color": "#FD79A8", "shadowColor": "#E84393", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana Huruf Z? 🔤",
+          "hint": "🦓 Zebra",
+          "options": [
+            { "label": "Z", "color": "#00B894", "shadowColor": "#00876C", "correct": true },
+            { "label": "U", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": false },
+            { "label": "Y", "color": "#FDCB6E", "shadowColor": "#E1A100", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}

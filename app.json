@@ -1,0 +1,31 @@
+{
+  "expo": {
+    "name": "Anak Belajar",
+    "slug": "anak-belajar",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "scheme": "anak-belajar",
+    "userInterfaceStyle": "light",
+    "newArchEnabled": true,
+    "splash": {
+      "resizeMode": "contain",
+      "backgroundColor": "#FFD93D"
+    },
+    "android": {
+      "package": "com.anakbelajar.app",
+      "minSdkVersion": 26
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-av",
+        {
+          "microphonePermission": false
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    }
+  }
+}

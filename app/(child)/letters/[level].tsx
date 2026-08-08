@@ -1,0 +1,364 @@
+import { View, Text, StyleSheet, Pressable, Animated } from 'react-native';
+import { useLocalSearchParams, useRouter } from 'expo-router';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import { useState, useRef, useEffect } from 'react';
+import { saveLevelProgress } from '@/lib/storage';
+import { speakText, stopSound } from '@/lib/audio';
+import lettersData from '@/assets/data/letters.json';
+
+type LetterOption = {
+  label: string;
+  color: string;
+  shadowColor: string;
+  correct: boolean;
+};
+
+type Question = {
+  id: number;
+  instruction: string;
+  hint?: string;
+  options: LetterOption[];
+};
+
+type FeedbackState = 'none' | 'correct' | 'wrong';
+
+function LetterOptionButton({
+  option,
+  onPress,
+}: {
+  option: LetterOption;
+  onPress: () => void;
+}) {
+  const scaleAnim = useRef(new Animated.Value(1)).current;
+  const translateYAnim = useRef(new Animated.Value(0)).current;
+
+  const handlePressIn = () => {
+    Animated.parallel([
+      Animated.spring(scaleAnim, { toValue: 0.96, useNativeDriver: true }),
+      Animated.spring(translateYAnim, { toValue: 4, useNativeDriver: true }),
+    ]).start();
+  };
+
+  const handlePressOut = () => {
+    Animated.parallel([
+      Animated.spring(scaleAnim, { toValue: 1, useNativeDriver: true }),
+      Animated.spring(translateYAnim, { toValue: 0, useNativeDriver: true }),
+    ]).start();
+  };
+
+  return (
+    <Pressable
+      onPressIn={handlePressIn}
+      onPressOut={handlePressOut}
+      onPress={onPress}
+    >
+      <Animated.View
+        style={[
+          styles.letterOption,
+          { backgroundColor: option.color, borderBottomColor: option.shadowColor },
+          { transform: [{ scale: scaleAnim }, { translateY: translateYAnim }] },
+        ]}
+      >
+        <Text style={styles.letterOptionText}>{option.label}</Text>
+      </Animated.View>
+    </Pressable>
+  );
+}
+
+export default function LetterQuestion() {
+  const { level } = useLocalSearchParams<{ level: string }>();
+  const router = useRouter();
+
+  // Load questions from JSON based on level param
+  const levelId = parseInt(level) || 1;
+  const levelData = lettersData.levels.find((l) => l.id === levelId);
+  const questions: Question[] = (levelData?.questions || []) as Question[];
+
+  const [currentQuestion, setCurrentQuestion] = useState(0);
+  const [feedback, setFeedback] = useState<FeedbackState>('none');
+  const [score, setScore] = useState(0);
+  const [isFinished, setIsFinished] = useState(false);
+
+  const question = questions[currentQuestion];
+
+  // Speak instruction on question change
+  useEffect(() => {
+    if (question && !isFinished) {
+      const speechPrompt = question.hint ? `${question.instruction}. ${question.hint}` : question.instruction;
+      speakText(speechPrompt);
+    }
+    return () => {
+      stopSound();
+    };
+  }, [currentQuestion, question, isFinished]);
+
+  const handleAnswer = (correct: boolean) => {
+    if (feedback !== 'none') return;
+    if (correct) {
+      setFeedback('correct');
+      speakText('Hore! Huruf yang benar!');
+      setScore((prev) => prev + 1);
+      setTimeout(() => {
+        if (currentQuestion < questions.length - 1) {
+          setCurrentQuestion((prev) => prev + 1);
+          setFeedback('none');
+        } else {
+          setIsFinished(true);
+          speakText('Pintar sekali mengenal huruf!');
+          saveLevelProgress('letters', String(levelId), score + 1, questions.length);
+        }
+      }, 1600);
+    } else {
+      setFeedback('wrong');
+      speakText('Cari huruf lagi ya!');
+      setTimeout(() => setFeedback('none'), 1200);
+    }
+  };
+
+  if (!question && !isFinished) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.finishContainer}>
+          <Text style={styles.finishEmoji}>⚠️</Text>
+          <Text style={styles.finishTitle}>Level belum tersedia</Text>
+          <Pressable
+            style={[styles.finishButton, { backgroundColor: '#FF5252', borderBottomColor: '#D32F2F' }]}
+            onPress={() => router.back()}
+          >
+            <Text style={styles.finishButtonText}>🏠 Kembali</Text>
+          </Pressable>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  if (isFinished) {
+    return (
+      <SafeAreaView style={styles.container}>
+        <View style={styles.finishContainer}>
+          <Text style={styles.finishEmoji}>🎉 🔤 🎉</Text>
+          <Text style={styles.finishTitle}>Pintar Mengenal Huruf!</Text>
+          <Text style={styles.finishScore}>
+            Berhasil menjawab {score} dari {questions.length} pertanyaan!
+          </Text>
+
+          <View style={styles.finishButtons}>
+            <Pressable
+              style={[styles.finishButton, { backgroundColor: '#FDCB6E', borderBottomColor: '#E1A100' }]}
+              onPress={() => { setCurrentQuestion(0); setScore(0); setFeedback('none'); setIsFinished(false); }}
+            >
+              <Text style={styles.finishButtonText}>🔄 Main Lagi</Text>
+            </Pressable>
+
+            <Pressable
+              style={[styles.finishButton, { backgroundColor: '#FF5252', borderBottomColor: '#D32F2F' }]}
+              onPress={() => router.back()}
+            >
+              <Text style={styles.finishButtonText}>🏠 Halaman Utama</Text>
+            </Pressable>
+          </View>
+        </View>
+      </SafeAreaView>
+    );
+  }
+
+  return (
+    <SafeAreaView style={styles.container}>
+      {/* Header Bar */}
+      <View style={styles.header}>
+        <Pressable onPress={() => router.back()} style={styles.backButton}>
+          <Text style={styles.backIcon}>⬅️</Text>
+        </Pressable>
+
+        <View style={styles.progressPill}>
+          <Text style={styles.progressText}>
+            Soal {currentQuestion + 1} / {questions.length}
+          </Text>
+        </View>
+      </View>
+
+      {/* Instruction Banner Box */}
+      <View style={styles.instructionBox}>
+        <Text style={styles.instruction}>{question.instruction}</Text>
+        {question.hint && <Text style={styles.hint}>{question.hint}</Text>}
+
+        <Pressable style={styles.audioButton} onPress={() => speakText(question.hint ? `${question.instruction}. ${question.hint}` : question.instruction)}>
+          <Text style={styles.audioIcon}>🔊 Putar Suara</Text>
+        </Pressable>
+      </View>
+
+      {/* Options Container */}
+      <View style={styles.optionsContainer}>
+        {question.options.map((option, index) => (
+          <LetterOptionButton
+            key={`${question.id}-${index}`}
+            option={option}
+            onPress={() => handleAnswer(option.correct)}
+          />
+        ))}
+      </View>
+
+      {/* Feedback Popups */}
+      {feedback === 'correct' && (
+        <View style={styles.feedbackOverlay}>
+          <View style={styles.feedbackCard}>
+            <Text style={styles.feedbackEmoji}>⭐ 🎈 ⭐</Text>
+            <Text style={styles.feedbackText}>Hore! Huruf Yang Benar! 🎉</Text>
+          </View>
+        </View>
+      )}
+
+      {feedback === 'wrong' && (
+        <View style={styles.feedbackOverlay}>
+          <View style={[styles.feedbackCard, { backgroundColor: '#FFEAA7' }]}>
+            <Text style={styles.feedbackEmoji}>💪😊</Text>
+            <Text style={styles.feedbackTextWrong}>Cari huruf lagi ya!</Text>
+          </View>
+        </View>
+      )}
+    </SafeAreaView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: { flex: 1, backgroundColor: '#FFFDF0' },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingTop: 14,
+    paddingBottom: 10,
+  },
+  backButton: {
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    backgroundColor: '#FFFFFF',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 4,
+    borderBottomColor: '#FFEAA7',
+    elevation: 4,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.1,
+    shadowRadius: 4,
+  },
+  backIcon: { fontSize: 22 },
+  progressPill: {
+    backgroundColor: '#FFEAA7',
+    paddingVertical: 8,
+    paddingHorizontal: 16,
+    borderRadius: 20,
+  },
+  progressText: {
+    fontSize: 14,
+    fontWeight: '900',
+    color: '#D63031',
+  },
+  instructionBox: {
+    alignItems: 'center',
+    paddingVertical: 18,
+    paddingHorizontal: 20,
+    backgroundColor: '#FFFFFF',
+    marginHorizontal: 20,
+    borderRadius: 24,
+    elevation: 2,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 6,
+  },
+  instruction: {
+    fontSize: 22,
+    fontWeight: '900',
+    color: '#2D3436',
+    textAlign: 'center',
+  },
+  hint: {
+    fontSize: 26,
+    fontWeight: '800',
+    color: '#E17055',
+    marginVertical: 4,
+  },
+  audioButton: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#FDCB6E',
+    paddingVertical: 8,
+    paddingHorizontal: 18,
+    borderRadius: 20,
+    elevation: 2,
+    marginTop: 4,
+  },
+  audioIcon: {
+    fontSize: 14,
+    fontWeight: '800',
+    color: '#2D3436',
+  },
+  optionsContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+    gap: 16,
+    paddingVertical: 16,
+  },
+  letterOption: {
+    borderRadius: 24,
+    paddingVertical: 22,
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderBottomWidth: 6,
+    elevation: 5,
+    shadowColor: '#000',
+    shadowOffset: { width: 0, height: 4 },
+    shadowOpacity: 0.12,
+    shadowRadius: 8,
+  },
+  letterOptionText: {
+    fontSize: 48,
+    fontWeight: '900',
+    color: '#FFFFFF',
+    textShadowColor: 'rgba(0,0,0,0.15)',
+    textShadowOffset: { width: 0, height: 1 },
+    textShadowRadius: 3,
+  },
+  feedbackOverlay: {
+    ...StyleSheet.absoluteFillObject,
+    backgroundColor: 'rgba(0,0,0,0.35)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 20,
+  },
+  feedbackCard: {
+    backgroundColor: '#FFFFFF',
+    borderRadius: 32,
+    paddingVertical: 32,
+    paddingHorizontal: 28,
+    alignItems: 'center',
+    elevation: 10,
+    width: '100%',
+  },
+  feedbackEmoji: { fontSize: 54, marginBottom: 12 },
+  feedbackText: { fontSize: 26, fontWeight: '900', color: '#00B894', textAlign: 'center' },
+  feedbackTextWrong: { fontSize: 24, fontWeight: '900', color: '#D63031', textAlign: 'center' },
+  finishContainer: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingHorizontal: 24,
+  },
+  finishEmoji: { fontSize: 64, marginBottom: 16 },
+  finishTitle: { fontSize: 32, fontWeight: '900', color: '#2D3436', marginBottom: 8 },
+  finishScore: { fontSize: 17, fontWeight: '700', color: '#636E72', marginBottom: 32 },
+  finishButtons: { width: '100%', gap: 16 },
+  finishButton: {
+    borderRadius: 24,
+    paddingVertical: 18,
+    alignItems: 'center',
+    borderBottomWidth: 6,
+    elevation: 4,
+  },
+  finishButtonText: { fontSize: 20, fontWeight: '900', color: '#FFFFFF' },
+});

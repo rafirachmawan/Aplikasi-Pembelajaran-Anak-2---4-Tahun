@@ -1,0 +1,264 @@
+{
+  "levels": [
+    {
+      "id": 1,
+      "title": "Level 1",
+      "description": "Warna Utama: Merah, Biru, Kuning, Hijau, Oranye",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh yang berwarna MERAH! 🍎",
+          "options": [
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": true },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false },
+            { "color": "#FDCB6E", "shadowColor": "#E1A100", "name": "Kuning 🟡", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh yang berwarna BIRU! 🫐",
+          "options": [
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": true },
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh yang berwarna KUNING! 🍋",
+          "options": [
+            { "color": "#FDCB6E", "shadowColor": "#E1A100", "name": "Kuning 🟡", "correct": true },
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": false },
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berwarna HIJAU! 🍏",
+          "options": [
+            { "color": "#E17055", "shadowColor": "#D63031", "name": "Oranye 🟠", "correct": false },
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": true },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh yang berwarna ORANYE! 🍊",
+          "options": [
+            { "color": "#E17055", "shadowColor": "#D63031", "name": "Oranye 🟠", "correct": true },
+            { "color": "#FDCB6E", "shadowColor": "#E1A100", "name": "Kuning 🟡", "correct": false },
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Level 2",
+      "description": "Warna Sekunder: Ungu, Pink, Coklat, Abu, Hitam",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh yang berwarna UNGU! 🍇",
+          "options": [
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": true },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": false },
+            { "color": "#636E72", "shadowColor": "#2D3436", "name": "Abu-Abu 🩶", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh yang berwarna PINK! 🌸",
+          "options": [
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": false },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": true },
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh yang berwarna COKLAT! 🍩",
+          "options": [
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": true },
+            { "color": "#2D3436", "shadowColor": "#000000", "name": "Hitam 🖤", "correct": false },
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berwarna ABU-ABU! 🐘",
+          "options": [
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": false },
+            { "color": "#636E72", "shadowColor": "#2D3436", "name": "Abu-Abu 🩶", "correct": true },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh yang berwarna HITAM! 🖤",
+          "options": [
+            { "color": "#2D3436", "shadowColor": "#000000", "name": "Hitam 🖤", "correct": true },
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": false },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Level 3",
+      "description": "Warna Terang & Cantik: Putih, Emas, Perak, Toska, Magenta",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Sentuh yang berwarna PUTIH! ☁️",
+          "options": [
+            { "color": "#B2BEC3", "shadowColor": "#636E72", "name": "Putih 🤍", "correct": true },
+            { "color": "#00CEC9", "shadowColor": "#00B894", "name": "Toska 🩵", "correct": false },
+            { "color": "#E17055", "shadowColor": "#D63031", "name": "Oranye 🟠", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Sentuh yang berwarna TOSKA! 🌊",
+          "options": [
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": false },
+            { "color": "#00CEC9", "shadowColor": "#009794", "name": "Toska 🩵", "correct": true },
+            { "color": "#B2BEC3", "shadowColor": "#636E72", "name": "Putih 🤍", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Sentuh yang berwarna EMAS! ✨",
+          "options": [
+            { "color": "#F1C40F", "shadowColor": "#D4AC0D", "name": "Emas 👑", "correct": true },
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": false },
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Sentuh yang berwarna PERAK! 🪙",
+          "options": [
+            { "color": "#2D3436", "shadowColor": "#000000", "name": "Hitam 🖤", "correct": false },
+            { "color": "#95A5A6", "shadowColor": "#7F8C8D", "name": "Perak 🪙", "correct": true },
+            { "color": "#F1C40F", "shadowColor": "#D4AC0D", "name": "Emas 👑", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Sentuh yang berwarna MAGENTA! 🌺",
+          "options": [
+            { "color": "#E84393", "shadowColor": "#AD1457", "name": "Magenta 🌺", "correct": true },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false },
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Level 4",
+      "description": "Kenali Warna Benda Sekitar",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Buah Apel berwarna apa? 🍎",
+          "options": [
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": true },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false },
+            { "color": "#2D3436", "shadowColor": "#000000", "name": "Hitam 🖤", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Pisang matang berwarna apa? 🍌",
+          "options": [
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": false },
+            { "color": "#FDCB6E", "shadowColor": "#E1A100", "name": "Kuning 🟡", "correct": true },
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Daun pohon berwarna apa? 🍃",
+          "options": [
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": true },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": false },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Warna awan di langit cerah? ☁️",
+          "options": [
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": false },
+            { "color": "#B2BEC3", "shadowColor": "#636E72", "name": "Putih 🤍", "correct": true },
+            { "color": "#E17055", "shadowColor": "#D63031", "name": "Oranye 🟠", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Warna bunga Mawar cantik? 🌹",
+          "options": [
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": true },
+            { "color": "#636E72", "shadowColor": "#2D3436", "name": "Abu-Abu 🩶", "correct": false },
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "Level 5",
+      "description": "Master Warna: Pemantapan Semua Warna",
+      "questions": [
+        {
+          "id": 1,
+          "instruction": "Mana warna Kesukaanmu? MERAH 🔴",
+          "options": [
+            { "color": "#FF5252", "shadowColor": "#D32F2F", "name": "Merah 🔴", "correct": true },
+            { "color": "#FDCB6E", "shadowColor": "#E1A100", "name": "Kuning 🟡", "correct": false },
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false }
+          ]
+        },
+        {
+          "id": 2,
+          "instruction": "Mana warna UNGU 🟣 favorit?",
+          "options": [
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false },
+            { "color": "#6C5CE7", "shadowColor": "#4834D4", "name": "Ungu 🟣", "correct": true },
+            { "color": "#8D6E63", "shadowColor": "#5D4037", "name": "Coklat 🤎", "correct": false }
+          ]
+        },
+        {
+          "id": 3,
+          "instruction": "Mana warna ORANYE 🟠 yang ceria?",
+          "options": [
+            { "color": "#E17055", "shadowColor": "#D63031", "name": "Oranye 🟠", "correct": true },
+            { "color": "#2D3436", "shadowColor": "#000000", "name": "Hitam 🖤", "correct": false },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": false }
+          ]
+        },
+        {
+          "id": 4,
+          "instruction": "Mana warna PINK 🌸 yang imut?",
+          "options": [
+            { "color": "#00B894", "shadowColor": "#00876C", "name": "Hijau 🟢", "correct": false },
+            { "color": "#FD79A8", "shadowColor": "#E84393", "name": "Pink 🌸", "correct": true },
+            { "color": "#F1C40F", "shadowColor": "#D4AC0D", "name": "Emas 👑", "correct": false }
+          ]
+        },
+        {
+          "id": 5,
+          "instruction": "Mana warna EMAS 👑 berkilau?",
+          "options": [
+            { "color": "#F1C40F", "shadowColor": "#D4AC0D", "name": "Emas 👑", "correct": true },
+            { "color": "#636E72", "shadowColor": "#2D3436", "name": "Abu-Abu 🩶", "correct": false },
+            { "color": "#0984E3", "shadowColor": "#005691", "name": "Biru 🔵", "correct": false }
+          ]
+        }
+      ]
+    }
+  ]
+}
