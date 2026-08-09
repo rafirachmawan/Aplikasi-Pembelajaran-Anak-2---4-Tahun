@@ -28,7 +28,7 @@
         {
           "id": 3,
           "instruction": "Mana Huruf C? 🔤",
-          "hint": "🐱 Cacing / Cumi",
+          "hint": "🐛 Cacing / 🦑 Cumi",
           "options": [
             { "label": "C", "color": "#6C5CE7", "shadowColor": "#4834D4", "correct": true },
             { "label": "E", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
@@ -48,7 +48,7 @@
         {
           "id": 5,
           "instruction": "Mana Huruf E? 🔤",
-          "hint": "🐘 Elang / Gajah (Elang)",
+          "hint": "🦅 Elang",
           "options": [
             { "label": "E", "color": "#0984E3", "shadowColor": "#005691", "correct": true },
             { "label": "B", "color": "#E17055", "shadowColor": "#D63031", "correct": false },
@@ -209,7 +209,7 @@
         {
           "id": 4,
           "instruction": "Mana Huruf S? 🔤",
-          "hint": "🦁 Sapi / Singa",
+          "hint": "🦁 Singa / 🐄 Sapi",
           "options": [
             { "label": "P", "color": "#0984E3", "shadowColor": "#005691", "correct": false },
             { "label": "S", "color": "#FF7675", "shadowColor": "#D63031", "correct": true },

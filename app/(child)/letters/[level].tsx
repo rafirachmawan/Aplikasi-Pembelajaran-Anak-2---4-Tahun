@@ -97,7 +97,8 @@ export default function LetterQuestion() {
     if (correct) {
       setFeedback('correct');
       speakText('Hore! Huruf yang benar!');
-      setScore((prev) => prev + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion((prev) => prev + 1);
@@ -105,7 +106,7 @@ export default function LetterQuestion() {
         } else {
           setIsFinished(true);
           speakText('Pintar sekali mengenal huruf!');
-          saveLevelProgress('letters', String(levelId), score + 1, questions.length);
+          saveLevelProgress('letters', String(levelId), newScore, questions.length);
         }
       }, 1600);
     } else {

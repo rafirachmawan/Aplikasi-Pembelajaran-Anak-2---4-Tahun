@@ -95,7 +95,8 @@ export default function ShapeQuestion() {
     if (correct) {
       setFeedback('correct');
       speakText('Hore! Jawabanmu benar!');
-      setScore((prev) => prev + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion((prev) => prev + 1);
@@ -103,7 +104,7 @@ export default function ShapeQuestion() {
         } else {
           setIsFinished(true);
           speakText('Luar biasa! Kamu pintar sekali!');
-          saveLevelProgress('shapes', String(levelId), score + 1, questions.length);
+          saveLevelProgress('shapes', String(levelId), newScore, questions.length);
         }
       }, 1600);
     } else {

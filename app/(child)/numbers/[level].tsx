@@ -95,7 +95,8 @@ export default function NumberQuestion() {
     if (correct) {
       setFeedback('correct');
       speakText('Hore! Angka yang benar!');
-      setScore((prev) => prev + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion((prev) => prev + 1);
@@ -103,7 +104,7 @@ export default function NumberQuestion() {
         } else {
           setIsFinished(true);
           speakText('Pintar sekali berhitung!');
-          saveLevelProgress('numbers', String(levelId), score + 1, questions.length);
+          saveLevelProgress('numbers', String(levelId), newScore, questions.length);
         }
       }, 1600);
     } else {

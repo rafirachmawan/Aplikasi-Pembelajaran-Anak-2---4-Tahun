@@ -202,9 +202,12 @@ export default function ChildHome() {
 
       {/* Top Bar Header */}
       <View style={styles.topBar}>
-        <View style={styles.greetingChip}>
-          <Text style={styles.greetingChipText}>🌟 Halo Cerdas!</Text>
-        </View>
+        <Pressable
+          style={styles.greetingChip}
+          onPress={() => router.push('/onboarding')}
+        >
+          <Text style={styles.greetingChipText}>📖 Panduan Belajar</Text>
+        </Pressable>
 
         <Pressable
           style={styles.parentChip}
@@ -254,6 +257,12 @@ export default function ChildHome() {
 
         {/* Bottom Footer Encouragement */}
         <View style={styles.footer}>
+          <Pressable
+            onPress={() => router.push('/onboarding')}
+            style={styles.onboardingFooterBtn}
+          >
+            <Text style={styles.onboardingFooterText}>📖 Buka Panduan & Petunjuk Aplikasi</Text>
+          </Pressable>
           <Text style={styles.footerText}>🎈 Belajar Sambil Bermain Every Day!</Text>
         </View>
       </ScrollView>
@@ -406,6 +415,19 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingTop: 24,
     paddingBottom: 8,
+    gap: 10,
+  },
+  onboardingFooterBtn: {
+    backgroundColor: '#FFEAA7',
+    paddingVertical: 10,
+    paddingHorizontal: 20,
+    borderRadius: 20,
+    elevation: 2,
+  },
+  onboardingFooterText: {
+    fontSize: 13,
+    fontWeight: '800',
+    color: '#D63031',
   },
   footerText: {
     fontSize: 13,

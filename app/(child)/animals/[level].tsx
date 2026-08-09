@@ -94,7 +94,8 @@ export default function AnimalsQuestion() {
     if (correct) {
       setFeedback('correct');
       speakText('Hore! Jawabanmu benar!');
-      setScore((prev) => prev + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion((prev) => prev + 1);
@@ -102,7 +103,7 @@ export default function AnimalsQuestion() {
         } else {
           setIsFinished(true);
           speakText('Luar biasa! Kamu pintar sekali!');
-          saveLevelProgress('animals', String(levelId), score + 1, questions.length);
+          saveLevelProgress('animals', String(levelId), newScore, questions.length);
         }
       }, 1600);
     } else {

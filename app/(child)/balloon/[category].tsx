@@ -75,6 +75,8 @@ export default function BalloonGame() {
   const livesRef = useRef(MAX_LIVES);
   const gameStateRef = useRef<'playing' | 'won' | 'lost'>('playing');
 
+  const poppedIdsRef = useRef<Set<number>>(new Set());
+
   // Keep refs synchronized
   useEffect(() => {
     targetRef.current = target;
@@ -147,7 +149,7 @@ export default function BalloonGame() {
     }).start(({ finished }) => {
       if (finished) {
         setBalloons((prev) => prev.filter((b) => b.id !== id));
-        if (item.label === targetRef.current.label && gameStateRef.current === 'playing') {
+        if (!poppedIdsRef.current.has(id) && item.label === targetRef.current.label && gameStateRef.current === 'playing') {
           handleMiss('missed');
         }
       }
@@ -172,7 +174,9 @@ export default function BalloonGame() {
 
   const handlePop = (balloon: ActiveBalloon) => {
     if (gameState !== 'playing') return;
+    if (poppedIdsRef.current.has(balloon.id)) return;
 
+    poppedIdsRef.current.add(balloon.id);
     setPopped(balloon.id);
     setTimeout(() => setPopped(null), 400);
 
@@ -199,6 +203,7 @@ export default function BalloonGame() {
   };
 
   const resetGame = () => {
+    poppedIdsRef.current.clear();
     setScore(0);
     setLives(MAX_LIVES);
     livesRef.current = MAX_LIVES;

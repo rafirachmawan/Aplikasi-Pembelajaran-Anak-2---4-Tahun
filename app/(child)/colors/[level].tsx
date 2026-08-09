@@ -96,7 +96,8 @@ export default function ColorQuestion() {
     if (correct) {
       setFeedback('correct');
       speakText('Hore! Jawabanmu benar!');
-      setScore((prev) => prev + 1);
+      const newScore = score + 1;
+      setScore(newScore);
       setTimeout(() => {
         if (currentQuestion < questions.length - 1) {
           setCurrentQuestion((prev) => prev + 1);
@@ -104,7 +105,7 @@ export default function ColorQuestion() {
         } else {
           setIsFinished(true);
           speakText('Luar biasa! Kamu pintar sekali!');
-          saveLevelProgress('colors', String(levelId), score + 1, questions.length);
+          saveLevelProgress('colors', String(levelId), newScore, questions.length);
         }
       }, 1600);
     } else {

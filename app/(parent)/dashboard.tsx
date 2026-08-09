@@ -64,6 +64,10 @@ export default function ParentDashboard() {
           <Text style={styles.title}>📊 Dashboard Orang Tua</Text>
           <Text style={styles.subtitle}>Pantau aktivitas & progres belajar anak</Text>
         </View>
+
+        <Pressable onPress={() => router.push('/onboarding')} style={styles.guideButton}>
+          <Text style={styles.guideIcon}>📖</Text>
+        </Pressable>
       </View>
 
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
@@ -139,8 +143,11 @@ export default function ParentDashboard() {
         </View>
       </ScrollView>
 
-      {/* Bottom Switch Mode Button */}
+      {/* Bottom Buttons */}
       <View style={styles.footer}>
+        <Pressable style={styles.guideFooterBtn} onPress={() => router.push('/onboarding')}>
+          <Text style={styles.guideFooterText}>📖 Buka Panduan & Petunjuk Aplikasi</Text>
+        </Pressable>
         <Pressable style={styles.modeButton} onPress={() => router.replace('/(child)')}>
           <Text style={styles.modeButtonText}>👶 Kembali ke Mode Anak</Text>
         </Pressable>
@@ -267,7 +274,28 @@ const styles = StyleSheet.create({
     marginLeft: 10,
   },
   arrowIcon: { fontSize: 11, fontWeight: '900', color: '#6C5CE7' },
-  footer: { paddingHorizontal: 20, paddingBottom: 16 },
+  guideButton: {
+    width: 44,
+    height: 44,
+    borderRadius: 22,
+    backgroundColor: '#FFEAA7',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginLeft: 10,
+    elevation: 3,
+    borderWidth: 1,
+    borderColor: 'rgba(0,0,0,0.06)',
+  },
+  guideIcon: { fontSize: 20 },
+  footer: { paddingHorizontal: 20, paddingBottom: 16, gap: 10 },
+  guideFooterBtn: {
+    backgroundColor: '#FFEAA7',
+    borderRadius: 20,
+    paddingVertical: 12,
+    alignItems: 'center',
+    elevation: 2,
+  },
+  guideFooterText: { fontSize: 14, fontWeight: '800', color: '#D63031' },
   modeButton: {
     backgroundColor: '#6C5CE7',
     borderRadius: 22,

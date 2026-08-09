@@ -164,7 +164,7 @@ export default function TracingGame() {
           <Text style={styles.backIcon}>⬅️</Text>
         </Pressable>
         <Text style={styles.title}>✏️ Tulis: {displayChar}</Text>
-        <Pressable onPress={() => speakText(`Tulis ${displayChar} mebggunakan jarimu!`)} style={styles.speakerBtn}>
+        <Pressable onPress={() => speakText(`Tulis ${displayChar} menggunakan jarimu!`)} style={styles.speakerBtn}>
           <Text style={styles.speakerIcon}>🔊</Text>
         </Pressable>
       </View>

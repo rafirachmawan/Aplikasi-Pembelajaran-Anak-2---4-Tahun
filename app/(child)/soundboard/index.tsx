@@ -175,7 +175,7 @@ export default function SoundboardGame() {
       }, 1800);
     } else {
       setQuizFeedback('😅 Bukan yang itu, coba lagi ya!');
-      speakText(`Bukan yang item itu, coba cari suara ${quizTarget.name}!`);
+      speakText(`Bukan yang itu, coba cari suara ${quizTarget.name}!`);
     }
   };
 

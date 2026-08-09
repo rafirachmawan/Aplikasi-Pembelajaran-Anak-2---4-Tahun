@@ -6,7 +6,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const { width } = Dimensions.get('window');
 
-const ONBOARDING_KEY = 'has_seen_onboarding_v2';
+const ONBOARDING_KEY = 'has_seen_onboarding_v3';
 
 const SLIDES = [
   {

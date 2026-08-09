@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRef, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const ONBOARDING_KEY = 'has_seen_onboarding_v2';
+const ONBOARDING_KEY = 'has_seen_onboarding_v3';
 
 function RoleCard({
   title,
@@ -82,6 +82,7 @@ export default function RoleSelectionScreen() {
   const [isCheckingOnboarding, setIsCheckingOnboarding] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
     async function checkOnboardingStatus() {
       try {
         const hasSeenOnboarding = await AsyncStorage.getItem(ONBOARDING_KEY);
@@ -89,13 +90,19 @@ export default function RoleSelectionScreen() {
           router.replace('/onboarding');
           return;
         }
+        if (isMounted) {
+          setIsCheckingOnboarding(false);
+        }
       } catch {
-        // On error, continue to home
-      } finally {
-        setIsCheckingOnboarding(false);
+        if (isMounted) {
+          setIsCheckingOnboarding(false);
+        }
       }
     }
     checkOnboardingStatus();
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   if (isCheckingOnboarding) {
