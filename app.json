@@ -1,18 +1,24 @@
 {
   "expo": {
-    "name": "Anak Belajar",
-    "slug": "anak-belajar",
+    "name": "BelajarCeria",
+    "slug": "belajar-ceria",
     "version": "1.0.0",
     "orientation": "portrait",
-    "scheme": "anak-belajar",
+    "icon": "./assets/icon.png",
+    "scheme": "belajar-ceria",
     "userInterfaceStyle": "light",
     "newArchEnabled": true,
     "splash": {
+      "image": "./assets/icon.png",
       "resizeMode": "contain",
       "backgroundColor": "#FFD93D"
     },
     "android": {
-      "package": "com.anakbelajar.app",
+      "package": "com.belajarceria.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/icon.png",
+        "backgroundColor": "#FFFDF5"
+      },
       "minSdkVersion": 26
     },
     "plugins": [
