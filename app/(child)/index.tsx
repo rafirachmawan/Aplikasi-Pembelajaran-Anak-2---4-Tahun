@@ -204,9 +204,16 @@ export default function ChildHome() {
       <View style={styles.topBar}>
         <Pressable
           style={styles.greetingChip}
+          onPress={() => router.push('/')}
+        >
+          <Text style={styles.greetingChipText}>🏠 Pilih Mode</Text>
+        </Pressable>
+
+        <Pressable
+          style={styles.greetingChip}
           onPress={() => router.push('/onboarding')}
         >
-          <Text style={styles.greetingChipText}>📖 Panduan Belajar</Text>
+          <Text style={styles.greetingChipText}>📖 Panduan</Text>
         </Pressable>
 
         <Pressable

@@ -148,9 +148,14 @@ export default function ParentDashboard() {
         <Pressable style={styles.guideFooterBtn} onPress={() => router.push('/onboarding')}>
           <Text style={styles.guideFooterText}>📖 Buka Panduan & Petunjuk Aplikasi</Text>
         </Pressable>
-        <Pressable style={styles.modeButton} onPress={() => router.replace('/(child)')}>
-          <Text style={styles.modeButtonText}>👶 Kembali ke Mode Anak</Text>
-        </Pressable>
+        <View style={{ flexDirection: 'row', gap: 10 }}>
+          <Pressable style={[styles.modeButton, { flex: 1, backgroundColor: '#00CEC9', borderBottomColor: '#00B894' }]} onPress={() => router.replace('/')}>
+            <Text style={styles.modeButtonText}>🏠 Pilih Mode</Text>
+          </Pressable>
+          <Pressable style={[styles.modeButton, { flex: 1 }]} onPress={() => router.replace('/(child)')}>
+            <Text style={styles.modeButtonText}>👶 Mode Anak</Text>
+          </Pressable>
+        </View>
       </View>
     </SafeAreaView>
   );

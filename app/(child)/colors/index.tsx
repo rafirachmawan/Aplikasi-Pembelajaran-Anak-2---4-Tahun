@@ -1,7 +1,9 @@
 import { View, Text, StyleSheet, Pressable, Animated, ScrollView } from 'react-native';
-import { useRouter, type Href } from 'expo-router';
+import { useRouter, useFocusEffect, type Href } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { useRef } from 'react';
+import { useRef, useState, useCallback } from 'react';
+import { getProgress, type AppProgress } from '@/lib/storage';
+import { speakText } from '@/lib/audio';
 
 const LEVELS = [
   { id: 1, title: 'Level 1', description: 'Merah, Biru, Kuning, Hijau, Oranye', badge: '🍎 🫐 🍋 🍏 🍊', color: '#FF7675', shadowColor: '#D63031' },
@@ -11,12 +13,21 @@ const LEVELS = [
   { id: 5, title: 'Level 5', description: 'Master Warna & Pemantapan', badge: '🏆 🌟 ✨ 🎨 🎉', color: '#FDCB6E', shadowColor: '#E1A100' },
 ];
 
-function LevelCardItem({ level }: { level: typeof LEVELS[0] }) {
+function LevelCardItem({
+  level,
+  isUnlocked,
+  stars,
+}: {
+  level: typeof LEVELS[0];
+  isUnlocked: boolean;
+  stars: number;
+}) {
   const router = useRouter();
   const scaleAnim = useRef(new Animated.Value(1)).current;
   const translateYAnim = useRef(new Animated.Value(0)).current;
 
   const handlePressIn = () => {
+    if (!isUnlocked) return;
     Animated.parallel([
       Animated.spring(scaleAnim, { toValue: 0.97, useNativeDriver: true }),
       Animated.spring(translateYAnim, { toValue: 4, useNativeDriver: true }),
@@ -24,37 +35,54 @@ function LevelCardItem({ level }: { level: typeof LEVELS[0] }) {
   };
 
   const handlePressOut = () => {
+    if (!isUnlocked) return;
     Animated.parallel([
       Animated.spring(scaleAnim, { toValue: 1, useNativeDriver: true }),
       Animated.spring(translateYAnim, { toValue: 0, useNativeDriver: true }),
     ]).start();
   };
 
+  const handlePress = () => {
+    if (!isUnlocked) {
+      speakText(`Selesaikan level ${level.id - 1} terlebih dahulu ya!`);
+      return;
+    }
+    router.push(`/(child)/colors/${level.id}` as Href);
+  };
+
   return (
     <Pressable
       onPressIn={handlePressIn}
       onPressOut={handlePressOut}
-      onPress={() => router.push(`/(child)/colors/${level.id}` as Href)}
+      onPress={handlePress}
     >
       <Animated.View
         style={[
           styles.levelCard,
-          { backgroundColor: level.color, borderBottomColor: level.shadowColor },
+          isUnlocked
+            ? { backgroundColor: level.color, borderBottomColor: level.shadowColor }
+            : styles.lockedCard,
           { transform: [{ scale: scaleAnim }, { translateY: translateYAnim }] },
         ]}
       >
-        <View style={styles.badgeCircle}>
-          <Text style={styles.badgeEmoji}>{level.id}</Text>
+        <View style={isUnlocked ? styles.badgeCircle : styles.lockedBadgeCircle}>
+          <Text style={styles.badgeEmoji}>{isUnlocked ? level.id : '🔒'}</Text>
         </View>
 
         <View style={styles.levelInfo}>
           <Text style={styles.levelTitle}>{level.title}</Text>
-          <Text style={styles.levelDescription}>{level.description}</Text>
-          <Text style={styles.levelItemsBadge}>{level.badge}</Text>
+          <Text style={styles.levelDescription}>
+            {isUnlocked ? level.description : `🔒 Selesaikan Level ${level.id - 1} terlebih dahulu`}
+          </Text>
+          <Text style={styles.levelItemsBadge}>
+            {isUnlocked ? level.badge : '🔒 Terkunci'}
+          </Text>
         </View>
 
         <View style={styles.playButtonCircle}>
-          <Text style={styles.playIcon}>▶️</Text>
+          <Text style={styles.playIcon}>
+            {isUnlocked ? (stars > 0 ? '⭐' : '▶️') : '🔒'}
+          </Text>
         </View>
       </Animated.View>
     </Pressable>
@@ -63,6 +91,24 @@ function LevelCardItem({ level }: { level: typeof LEVELS[0] }) {
 
 export default function ColorsLevelSelect() {
   const router = useRouter();
+  const [progress, setProgress] = useState<AppProgress | null>(null);
+
+  useFocusEffect(
+    useCallback(() => {
+      getProgress().then(setProgress);
+    }, [])
+  );
+
+  const isLevelUnlocked = (levelId: number) => {
+    if (levelId === 1) return true;
+    if (!progress) return false;
+    return progress.colors[String(levelId - 1)]?.completed === true;
+  };
+
+  const getLevelStars = (levelId: number) => {
+    if (!progress) return 0;
+    return progress.colors[String(levelId)]?.score || 0;
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -78,7 +124,12 @@ export default function ColorsLevelSelect() {
       <ScrollView contentContainerStyle={styles.scrollContent} showsVerticalScrollIndicator={false}>
         <View style={styles.levelList}>
           {LEVELS.map((level) => (
-            <LevelCardItem key={level.id} level={level} />
+            <LevelCardItem
+              key={level.id}
+              level={level}
+              isUnlocked={isLevelUnlocked(level.id)}
+              stars={getLevelStars(level.id)}
+            />
           ))}
         </View>
       </ScrollView>
@@ -142,11 +193,25 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.12,
     shadowRadius: 8,
   },
+  lockedCard: {
+    backgroundColor: '#A0AEC0',
+    borderBottomColor: '#718096',
+    opacity: 0.85,
+  },
   badgeCircle: {
     width: 52,
     height: 52,
     borderRadius: 26,
     backgroundColor: 'rgba(255,255,255,0.95)',
+    alignItems: 'center',
+    justifyContent: 'center',
+    marginRight: 14,
+  },
+  lockedBadgeCircle: {
+    width: 52,
+    height: 52,
+    borderRadius: 26,
+    backgroundColor: 'rgba(255,255,255,0.7)',
     alignItems: 'center',
     justifyContent: 'center',
     marginRight: 14,

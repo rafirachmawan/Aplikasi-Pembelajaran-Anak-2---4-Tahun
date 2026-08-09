@@ -1,4 +1,4 @@
-import { View, Text, StyleSheet, Pressable, Animated, ActivityIndicator, Linking } from 'react-native';
+import { View, Text, StyleSheet, Pressable, Animated, ActivityIndicator, Linking, ScrollView, useWindowDimensions } from 'react-native';
 import { useRouter } from 'expo-router';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useRef, useEffect, useState } from 'react';
@@ -80,6 +80,7 @@ function RoleCard({
 export default function RoleSelectionScreen() {
   const router = useRouter();
   const [isCheckingOnboarding, setIsCheckingOnboarding] = useState(true);
+  const { height } = useWindowDimensions();
 
   useEffect(() => {
     let isMounted = true;
@@ -119,53 +120,59 @@ export default function RoleSelectionScreen() {
       <View style={[styles.bgCircle, styles.bgCircle1]} />
       <View style={[styles.bgCircle, styles.bgCircle2]} />
 
-      {/* Main Header */}
-      <View style={styles.header}>
-        <Pressable
-          onPress={() => router.push('/onboarding')}
-          style={styles.appBadge}
-        >
-          <Text style={styles.appBadgeText}>🎈 Dunia Si Kecil 2-4 Tahun • Panduan 📖</Text>
-        </Pressable>
-        <Text style={styles.welcomeTitle}>Selamat Datang! 👋</Text>
-        <Text style={styles.welcomeSubtitle}>Siapa yang sedang membuka aplikasi?</Text>
-      </View>
+      <ScrollView
+        contentContainerStyle={[styles.scrollContent, { minHeight: height - 60 }]}
+        showsVerticalScrollIndicator={false}
+        bounces={true}
+      >
+        {/* Main Header */}
+        <View style={styles.header}>
+          <Pressable
+            onPress={() => router.push('/onboarding')}
+            style={styles.appBadge}
+          >
+            <Text style={styles.appBadgeText}>🎈 Dunia Si Kecil 2-4 Tahun • Panduan 📖</Text>
+          </Pressable>
+          <Text style={styles.welcomeTitle}>Selamat Datang! 👋</Text>
+          <Text style={styles.welcomeSubtitle}>Siapa yang sedang membuka aplikasi?</Text>
+        </View>
 
-      {/* Options */}
-      <View style={styles.roleContainer}>
-        <RoleCard
-          title="Mode Anak 👶"
-          subtitle="Belajar Warna, Angka & Huruf sambil bermain seru!"
-          badgeText="Masuk Main ▶"
-          emoji="🚀"
-          color="#FF5252"
-          shadowColor="#D63031"
-          tagText="Paling Seru!"
-          onPress={() => router.push('/(child)')}
-        />
+        {/* Options */}
+        <View style={styles.roleContainer}>
+          <RoleCard
+            title="Mode Anak 👶"
+            subtitle="Belajar Warna, Angka & Huruf sambil bermain seru!"
+            badgeText="Masuk Main ▶"
+            emoji="🚀"
+            color="#FF5252"
+            shadowColor="#D63031"
+            tagText="Paling Seru!"
+            onPress={() => router.push('/(child)')}
+          />
 
-        <RoleCard
-          title="Mode Orang Tua 👨‍👩‍👧"
-          subtitle="Pantau perkembangan belajar & laporan progres anak"
-          badgeText="Masuk Dashboard 🛡️"
-          emoji="📊"
-          color="#6C5CE7"
-          shadowColor="#4834D4"
-          tagText="🔒 Dilindungi Soal"
-          onPress={() => router.push('/(parent)/gate')}
-        />
-      </View>
+          <RoleCard
+            title="Mode Orang Tua 👨‍👩‍👧"
+            subtitle="Pantau perkembangan belajar & laporan progres anak"
+            badgeText="Masuk Dashboard 🛡️"
+            emoji="📊"
+            color="#6C5CE7"
+            shadowColor="#4834D4"
+            tagText="🔒 Dilindungi Soal"
+            onPress={() => router.push('/(parent)/gate')}
+          />
+        </View>
 
-      {/* Footer hint & Startup Website Link */}
-      <View style={styles.footer}>
-        <Text style={styles.footerText}>💡 Anda bisa berpindah mode kapan saja di dalam aplikasi</Text>
-        <Pressable
-          onPress={() => Linking.openURL('https://www.gapaidigital.my.id/')}
-          style={styles.startupLinkBtn}
-        >
-          <Text style={styles.startupLinkText}>🌐 Gapai Digital • www.gapaidigital.my.id</Text>
-        </Pressable>
-      </View>
+        {/* Footer hint & Startup Website Link */}
+        <View style={styles.footer}>
+          <Text style={styles.footerText}>💡 Anda bisa berpindah mode kapan saja di dalam aplikasi</Text>
+          <Pressable
+            onPress={() => Linking.openURL('https://www.gapaidigital.my.id/')}
+            style={styles.startupLinkBtn}
+          >
+            <Text style={styles.startupLinkText}>🌐 Gapai Digital • www.gapaidigital.my.id</Text>
+          </Pressable>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 }
@@ -180,9 +187,12 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#FFFDF5',
-    justifyContent: 'space-between',
+  },
+  scrollContent: {
     paddingHorizontal: 20,
     paddingVertical: 16,
+    justifyContent: 'space-between',
+    flexGrow: 1,
   },
   bgCircle: {
     position: 'absolute',
@@ -205,7 +215,7 @@ const styles = StyleSheet.create({
   },
   header: {
     alignItems: 'center',
-    marginTop: 20,
+    marginTop: 10,
   },
   appBadge: {
     backgroundColor: '#FFEAA7',
@@ -218,27 +228,28 @@ const styles = StyleSheet.create({
     fontSize: 13,
     fontWeight: '900',
     color: '#D63031',
+    textAlign: 'center',
   },
   welcomeTitle: {
-    fontSize: 30,
+    fontSize: 28,
     fontWeight: '900',
     color: '#2D3436',
     textAlign: 'center',
     marginBottom: 6,
   },
   welcomeSubtitle: {
-    fontSize: 15,
+    fontSize: 14,
     fontWeight: '700',
     color: '#636E72',
     textAlign: 'center',
   },
   roleContainer: {
-    gap: 20,
+    gap: 16,
     marginVertical: 20,
   },
   roleCard: {
     borderRadius: 28,
-    padding: 22,
+    padding: 20,
     borderBottomWidth: 6,
     elevation: 6,
     shadowColor: '#000',
@@ -250,18 +261,18 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
-    marginBottom: 12,
+    marginBottom: 10,
   },
   emojiCircle: {
-    width: 54,
-    height: 54,
-    borderRadius: 27,
+    width: 50,
+    height: 50,
+    borderRadius: 25,
     backgroundColor: 'rgba(255,255,255,0.95)',
     alignItems: 'center',
     justifyContent: 'center',
   },
   emojiText: {
-    fontSize: 26,
+    fontSize: 24,
   },
   tagBadge: {
     backgroundColor: 'rgba(255,255,255,0.25)',
@@ -275,22 +286,22 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   roleTitle: {
-    fontSize: 24,
+    fontSize: 22,
     fontWeight: '900',
     color: '#FFFFFF',
     marginBottom: 4,
   },
   roleSubtitle: {
-    fontSize: 14,
+    fontSize: 13,
     fontWeight: '600',
     color: 'rgba(255,255,255,0.9)',
-    marginBottom: 16,
-    lineHeight: 20,
+    marginBottom: 14,
+    lineHeight: 19,
   },
   actionBtn: {
     backgroundColor: '#FFFFFF',
     borderRadius: 18,
-    paddingVertical: 12,
+    paddingVertical: 11,
     alignItems: 'center',
     elevation: 2,
   },
@@ -301,7 +312,7 @@ const styles = StyleSheet.create({
   },
   footer: {
     alignItems: 'center',
-    marginBottom: 10,
+    paddingBottom: 10,
     gap: 8,
   },
   footerText: {
@@ -323,4 +334,3 @@ const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
 });
-
